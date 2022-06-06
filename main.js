@@ -1,4 +1,5 @@
 
+function comprar (){
 let cantidad=0
 let producto
 let precio=0
@@ -20,8 +21,10 @@ do {
                  break;
         }
          subtotal = precio * cantidad
+         
          total=total+subtotal
-         alert ("El total de tu compra es =$" + total)}
+
+         alert ("El subtotal de tu compra es =$" + total)}
     else{
     alert("Disculpa, pero la cantidad debe estar entre 0 y 1000")
     }
@@ -31,4 +34,11 @@ do {
     }
 while
 (continuar=confirm("¿Quieres continuar comprando?"))
+return(total)
+}
 
+const finalizar = (total) => {
+     confirm ("El total total de su compra es $"+ total + "\n\n¿Desea Finalizar?")
+     alert("¡Muchas gracias por comprar con nosotros!")
+}
+finalizar(comprar())
